@@ -336,7 +336,7 @@ int main() {
                 }
                 else
                 {
-                  ref_vel -= 0.224; // We can'c change lanes, so reduce speed
+                  ref_vel -= 0.224; // We can't change lanes, so reduce speed
                 }
               }
               else if((lane == 2) && (hazard_left == 0))
@@ -362,7 +362,7 @@ int main() {
             double ref_y = car_y;
             double ref_yaw = deg2rad(car_yaw);
 
-            // if previous size is almos empty, yse the car as starting ref
+            // if previous size is almost empty, yse the car as starting ref
             if(prev_size < 2)
             {
               // use two points that make the path tangent to the car
