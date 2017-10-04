@@ -233,6 +233,7 @@ int main() {
             // Previous path data given to the Planner
             auto previous_path_x = j[1]["previous_path_x"];
             auto previous_path_y = j[1]["previous_path_y"];
+
             // Previous path's end s and d values 
             double end_path_s = j[1]["end_path_s"];
             double end_path_d = j[1]["end_path_d"];
@@ -335,7 +336,7 @@ int main() {
                 }
                 else
                 {
-                  ref_vel -= 0.224;
+                  ref_vel -= 0.224; // We can'c change lanes, so reduce speed
                 }
               }
               else if((lane == 2) && (hazard_left == 0))
@@ -344,7 +345,7 @@ int main() {
               }
               else
               {
-                ref_vel -= 0.224; // about 5m/s^2 - so half our accel limit
+                ref_vel -= 0.224;
               }
             }
             else if(ref_vel < 49.5)
